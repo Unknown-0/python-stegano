@@ -18,14 +18,11 @@ def dec2bin(d,nb=0):
     return b.zfill(nb)
 
 def usage():
-		print "Utilisation du programme ./stegano.py imagesource imagedestination"
+		print "Utilisation du programme ./stegano.py imagesource.bmp imagedestination.bmp 'votre message a dissimuler'"
 		exit()
 #######################-----Main-----#######################
 if len(sys.argv) < 3 or sys.argv[1]=="-h" or sys.argv[1]=="h" or sys.argv[1] == "help" :
 	usage()
-#ofi = open(sys.argv[3], 'r')
-#msgascii = ofi.read()
-#ofi.close()
 msgascii= sys.argv[3]
 imgsource = sys.argv[1]
 imgdestination = sys.argv[2]
@@ -92,8 +89,4 @@ for y in range ( hauteur ) :
 	if i == msgbinlen:
                         break
 imgdst.save(imgdestination)
-print largeur
-print hauteur 
-print x
-print y
-
+print "Votre message a bien était ajouté à l'image" 
