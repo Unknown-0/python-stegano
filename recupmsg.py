@@ -62,4 +62,4 @@ msg=binascii.unhexlify('%x' % t)
 f = open(sys.argv[2], "a")
 f.write(msg)
 f.close()
-
+print "le message dissimulé est :%s " % msg
